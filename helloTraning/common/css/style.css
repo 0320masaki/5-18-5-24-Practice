@@ -1,0 +1,458 @@
+@charset "utf-8";
+
+body{
+	color: #333;
+	background: #faf7f1;
+	font-size: 100%;
+	font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+	line-height: 1.7;
+	letter-spacing: 0.05em;
+}
+
+img{
+	vertical-align: bottom;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1vw;
+}
+
+.element {
+  /* 最初は非表示 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+  transition: opacity 1s, visibility 1s, transform 1s;
+}
+/* フェードイン時に入るクラス */
+.is-fadein {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/****************************************
+
+                fv
+
+*****************************************/
+
+.headerArea{
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.headerTop {
+	display: flex;
+	align-items: center;
+}
+
+.headerTop h1 {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝B", serif;
+	font-size: 2rem;
+}
+
+.header_nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header_nav ul li {
+	text-align: center;
+	padding: 0 1em;
+}
+
+.header_nav ul li a{
+	display: block;
+}
+
+nav a:hover{
+	background: #e2750f;
+	transition: 0.5s;
+}
+
+.mv{
+	width: 1366px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+.mv img{
+	width: 100%;
+}
+
+.mv p{
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝B", serif;
+	font-size: 4.5rem;
+	position: absolute;
+	top: 35%;
+	left: 10%;
+}
+
+.slider{
+    margin: 0 auto;
+}
+.slider img{
+    height: auto;
+    width: 100%;
+}
+
+/****************************************
+
+             main contents
+
+*****************************************/
+
+section h2{
+	font-size: 2.25rem;
+	font-weight: 700;
+	text-align: center;
+	padding: 1em 0 0.25em;
+}
+
+#about{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 5vw;
+	padding-bottom: 2rem;
+}
+.about p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.125rem;
+}
+
+#about .point{
+	display: flex;
+	justify-content: center;
+	gap: 0 1.5rem;
+}
+
+#about .card{
+	width: calc(90% / 3);
+	background: #fff;
+	padding: 1.5em;
+	border-radius: 20px;
+}
+
+#about .card h3{
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+#about .card p{
+	margin-top: 1em;
+	opacity: 0.9;
+}
+
+#info{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 5vw;
+	padding-bottom: 2rem;
+}
+
+.traning p{
+	width: 75%;
+	margin: 0 auto;
+	font-size: 1.125rem;
+}
+
+.info dl{
+	width: 60%;
+	margin: 0 auto;
+	border: 1px solid #333;
+	border-bottom: none;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	background: #fff;
+}
+
+.info dt{
+	width: 30%;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+	text-align: center;
+	padding: 1em;
+	align-self: stretch;
+	font-size: 1.125rem;
+}
+
+.info dd{
+	   width: 70%;
+		border-bottom: 1px solid #333;
+	padding: 1em;
+	align-self: stretch;
+}
+
+.link{
+	font-size: 1.5rem;
+	text-align: right;
+	padding: 1em 2em 0;
+}
+
+.link a{
+	font-weight: 700;
+}
+
+.link span{
+	color:  #e2750f;
+}
+
+.link a:hover{
+	background: #fff;
+	transition: 0.5s;
+}
+
+.goForm{
+	padding: 5em 0 2.5em;
+	text-align: center;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  border-radius: 20px;
+}
+
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+
+/****************************************
+
+             footer
+
+*****************************************/
+
+footer{
+	text-align: center;
+}
+
+footer p{
+	padding-bottom: 2em;
+}
+
+/****************************************
+
+             other page
+
+*****************************************/
+#curriculum{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 2.5vw;
+	padding-bottom: 2rem;
+}
+
+.curriculum dl{
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #333;
+	border-bottom: none;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	background: #fff;
+}
+
+.curriculum dt{
+	width: 30%;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+	text-align: center;
+	padding: 1em;
+	align-self: stretch;
+	font-size: 1.125rem;
+}
+
+.curriculum dd{
+	   width: 70%;
+		border-bottom: 1px solid #333;
+	padding: 1em;
+	align-self: stretch;
+}
+
+#works{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 5vw;
+	padding-bottom: 2rem;
+}
+
+#works .works{
+	padding: 1.5rem;
+}
+
+#works .card{
+	width: 90%;
+	margin: 1.5rem auto;
+	background: #fff;
+	padding:1em 2em;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+}
+
+#works .card h3{
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+#works img{
+    height: auto;
+    width: 100%;
+}
+
+#works .card p{
+	font-size: 0.8rem;
+	opacity: 0.9;
+}
+
+#works .title{
+	
+}
+
+#works .detail{
+}
+
+#overview{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 5vw;
+	padding-bottom: 2rem;
+}
+
+#overview h3{
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.overview dl{
+	width: 90%;
+	margin: 0 auto 2em;
+	border: 1px solid #333;
+	border-bottom: none;
+	display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+	background: #fff;
+}
+
+.overview dt{
+	width: 30%;
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+	text-align: center;
+	padding: 1em;
+	align-self: stretch;
+	font-size: 1.125rem;
+}
+
+.overview dd{
+	   width: 70%;
+		border-bottom: 1px solid #333;
+	padding: 1em;
+	align-self: stretch;
+}
+/****************************************
+
+             form page
+
+*****************************************/
+
+#form{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 2.5vw;
+	padding-bottom: 2rem;
+}
+
+form {
+  padding: 1em;
+ background: #ddd;
+}
+
+form ul {
+  list-style: none;
+}
+
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+}
+
+input,
+textarea,
+select{
+  font: 1em sans-serif;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #333;
+}
+
+.button {
+   
+}
+
+button {
+	padding: 1em;
+	border-radius: 1em;
+}
+
