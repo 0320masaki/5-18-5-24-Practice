@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 <title>WEBサイト制作科 | 応募フォーム</title>
 <link href="../common/css/base.css" rel="stylesheet" type="text/css">
 <link href="../common/css/style.css" rel="stylesheet" type="text/css">
@@ -29,29 +30,65 @@
 <main class="container">
   <section id="form">
     <h2>応募申し込み</h2>
-    <form action="" method="post">
-      <ul>
-        <li>
-          <label for="name">お名前<span>※必須</span></label>
-          <input type="text" id="name" name="user_name">
-        </li>
-        <li>
-          <label for="zip_code">郵便番号<span>※必須</span></label>
-          <input type="text" id="zip_code" name="zip_code">
-        </li>
-        <li>
-          <label for="select">きっかけ</label>
-          <select name="select" id="select">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value="その他">その他</option>
-          </select>
-        </li>
-        <li class="button">
-          <button type="submit">メッセージを送信</button>
-        </li>
-      </ul>
+    <form action="/_cart/order/member.html#registNew" method="post" id="formRegistNew" class="decorateForm clearfix h-adr">
+      <input type="hidden" name="c" value="CheckNewMemberRegist">
+      <input type="hidden" name="LoginPattern" value="2">
+      <input type="hidden" name="CreditCardID" value="-1">
+      <input type="hidden" name="ctoken" value="">
+      <div id="registAddress" class="atAd formItem">
+        <dl id="tblName" class="clearfix">
+          <dt>お名前<span class="str">必須</span></dt>
+          <dd>
+            <ul class="list clearfix">
+              <li>
+                <input id="usearNameSei" type="text" name="Sei" value="" class="inputM jpn del err" maxlength="20" placeholder="例 : 山田　太郎" autocomplete="family-name">
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl id="tblZip" class="tblZip clearfix">
+          <dt>郵便番号<span class="str">必須</span></dt>
+          <dd class="linedParent">
+			  <span class="p-country-name" style="display:none;">Japan</span>
+            <input id="zipCodeNum" data-is-permit-hyphen="true" type="text" name="Zipcode" value="" class="inputM num p-postal-code" maxlength="8" placeholder="例 : 2617116" autocomplete="postal-code">
+            <a href="http://www.post.japanpost.jp/zipcode/index.html" class="ico_blank" target="_blank">郵便番号を調べる</a> </dd>
+        </dl>
+        <dl class="tblArea clearfix">
+          <dt>都道府県<span class="str">必須</span></dt>
+          <dd>
+            <input type="text" name="PrefID" class="inputL p-region" value="">
+          </dd>
+        </dl>
+        <dl class="tblAddress1 clearfix">
+          <dt>住所1<span class="str">必須</span></dt>
+          <dd>
+            <input id="prefName" type="text" name="Address1" value="" class="inputMAX p-locality p-street-address p-extended-address" maxlength="100" placeholder="市区町村、番地など" autocomplete="address-level4">
+          </dd>
+        </dl>
+        <dl id="tblAddress2" class="clearfix">
+          <dt>住所2</dt>
+          <dd>
+            <input type="text" name="Address2" value="" class="inputMAX" maxlength="100" placeholder="建物名など（任意）" autocomplete="address-line2">
+          </dd>
+        </dl>
+        <dl id="sectelForm" class="tblTel1 clearfix">
+          <dt>電話番号<span class="str">必須</span></dt>
+          <dd class="listParent telForm">
+            <ul class="clearfix list plural">
+              <li>
+                <input type="text" name="Tel_Input" value="" class="inputL num del" maxlength="15" placeholder="例) 09012345678 ハイフンなし" autocomplete="tel">
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>メールアドレス<span class="str">必須</span></dt>
+          <dd>
+            <input type="text" name="EMail" value="" class="inputLL en" maxlength="100" placeholder="example@co.jp" autocomplete="email" data-email-input-form="">
+          </dd>
+        </dl>
+        <!-- /#registAddress --></div>
+		<div class="goForm"><input type="submit" value="ボタンを押して送信する" class="btn btn--orange"></div>
     </form>
   </section>
 </main>
@@ -59,5 +96,6 @@
   <div class="footerLogo"><a href="../index.html"><img src="../common/images/ロゴマーク.png" width="300" height="300" alt="foterLogo"/></a></div>
   <p><small>@copy</small></p>
 </footer>
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 </body>
 </html>
