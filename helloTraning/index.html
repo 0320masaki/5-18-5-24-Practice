@@ -2,13 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width">
 <title>WEBサイト制作科</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <link href="common/css/base.css" rel="stylesheet" type="text/css">
 <link href="common/css/style.css" rel="stylesheet" type="text/css">
+<link href="common/css/fv.css" rel="stylesheet" type="text/css">
+<link href="common/css/sp.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="common/css/slick.css">
 <link href="common/css/slick-theme.css" rel="stylesheet" type="text/css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
 <script type="text/javascript" src="common/js/slick.min.js"></script>
 </head>
 <body>
@@ -28,18 +31,19 @@
       </ul>
     </nav>
   </div>
-  <!--headerArea-->
-	</header>
-  <div class="mv">
-    <div class="slider">
-      <div><img src="common/images/mv1.jpg" width="1366" height="650" alt="4人グループで1台のパソコンを囲む"/></div>
-      <div><img src="common/images/mv2.jpg" width="1366" height="650" alt="パソコンで仕事をする女性"/></div>
-      <div><img src="common/images/mv3.jpg" width="1366" height="650" alt="パソコンで仕事をする男性"/></div>
-    </div>
-    <p>未経験から<br>
-      &nbsp;WEB業界へ</p>
+  <!--headerArea--> 
+</header>
+<div class="mv">
+  <div class="slider">
+    <div><img src="common/images/mv1.jpg" width="1366" height="650" alt="4人グループで1台のパソコンを囲む"/></div>
+    <div><img src="common/images/mv2.jpg" width="1366" height="650" alt="パソコンで仕事をする女性"/></div>
+    <div><img src="common/images/mv3.jpg" width="1366" height="650" alt="パソコンで仕事をする男性"/></div>
   </div>
-  <!--mv--> 
+  <p>未経験から<br>
+    &nbsp;WEB業界へ</p>
+</div>
+	
+<!--mv-->
 <main class="container">
   <section id="about" class="element">
     <div class="about">
@@ -86,8 +90,8 @@
       <h2>受講案内</h2>
       <dl>
         <dt>訓練会場</dt>
-        <dd>〒708-0022 岡山県津山市山下92-1
-          <br>津山圏域雇用労働センター</dd>
+        <dd>〒708-0022 岡山県津山市山下92-1 <br>
+          津山圏域雇用労働センター</dd>
         <dt>訓練期間</dt>
         <dd>令和4年8月2日～令和4年12月27日</dd>
         <dt>募集期間</dt>
@@ -105,13 +109,29 @@
   <div class="footerLogo"><a href="index.html"><img src="common/images/ロゴマーク.png" width="300" height="300" alt="foterLogo"/></a></div>
   <p><small>@copy</small></p>
 </footer>
-	<script type="text/javascript">
+<script type="text/javascript">
 		//slick slider
     $(document).ready(function(){
       $('.slider').slick({
         autoplay:true,
-    autoplaySpeed:3000,
-    dots:true 
+		  fade:true,
+		  speed:2000,
+    autoplaySpeed:2000,
+		  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          arrows: false,
+          dots: false,
+        }
+      },
+    ]
       });
     });
 		//slick slider

@@ -53,13 +53,17 @@ a{
 
 *****************************************/
 
-.headerArea{
+header{
+	position: relative;
 	max-width: 1200px;
 	margin: 0 auto;
+}
+
+.headerArea{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
+	background: rgba(250,247,241,0.8);
 }
 
 .headerTop {
@@ -68,7 +72,7 @@ a{
 }
 
 .headerTop h1 {
-	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝B", serif;*/
+	font-family: 'Open Sans', 'Noto Sans JP', sans-serif;
 	font-size: 3.6rem;
 }
 
@@ -88,16 +92,25 @@ a{
 	display: block;
 }
 
-nav a:hover{
-	background: #e2750f;
-	transition: 0.5s;
+nav a{
+	position: relative;
+}
+
+nav a:hover:before{
+	content: '';
+	position: absolute;
+	left: 100%;
+	bottom: 0;
+	width: 0;
+	border-bottom: solid 1.5px #000;
+	transform: translateX(-100%);
+	animation: border_anim 0.2s linear forwards;
 }
 
 .mv{
 	width: 1366px;
 	margin: 0 auto;
 	display: block;
-	position: relative;
 }
 
 .mv img{
@@ -105,7 +118,8 @@ nav a:hover{
 }
 
 .mv p{
-	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝B", serif;*/
+	font-family: 'Open Sans','Noto Sans JP',  sans-serif;
+	font-weight: bold;
 	font-size: 7.2rem;
 	position: absolute;
 	top: 35%;
@@ -234,7 +248,8 @@ section h2{
 	font-size: 2.4rem;
 	text-align: right;
 	padding-top: 1em;
-	width: 90%
+	width: 90%;
+	margin: 0 auto;
 }
 
 .link a{
@@ -265,7 +280,7 @@ section h2{
 		width: 0%;
 	}
 	100%{
-		width: 90%;
+		width: 100%;
 	}
 }
 
@@ -505,7 +520,7 @@ footer p{
 }
 
 #formRegistNew {
-    background: #f0f0f0;
+    background: #ffe7b9;
     border: 1px solid #e6e6e6;
     border-radius: 4px;
     padding: 0 1.7rem 0 1.8rem;
@@ -596,6 +611,13 @@ footer p{
     border: solid 1px #c8c8c8;
     padding: 1rem 0.7rem;
 }
+
+#select {
+    width: 42%;
+    border: solid 1px #c8c8c8;
+    padding: 1rem 0.7rem;
+}
+
 
 #formRegistNew .atAd dl#tblZip dd {
     vertical-align: middle;
